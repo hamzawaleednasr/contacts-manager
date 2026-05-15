@@ -1,0 +1,52 @@
+## Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+
+## Build Folders
+bin/
+obj/
+
+## NuGet
+packages/
+*.nupkg
+
+## Visual Studio build results
+*.dll
+*.exe
+*.app
+*.log
+*.pdb
+
+## Publish output
+publish/
+_PublishedWebsites/
+
+## Rider
+.idea/
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## Database files
+*.mdf
+*.ldf
+*.sqlite
+
+## Environment / secrets
+.env
+appsettings.*
+user-secrets
+
+## OS generated files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+Desktop.ini
+
+## Others
+TestResults/
+*.vsix

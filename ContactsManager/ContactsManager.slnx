@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../ContactsManagerBLL/ContactsManagerBLL.csproj" Id="e4500058-9516-4380-b6d5-3c6c4c63419f" />
+  <Project Path="../ContactsManagerDAL/ContactsManagerDAL.csproj" Id="6fb82ae9-774c-4e95-b053-2e72093bd7d2" />
+  <Project Path="ContactsManagerUI.csproj" Id="70dd275b-fd8e-4d87-a17e-307aa4633372" />
+</Solution>

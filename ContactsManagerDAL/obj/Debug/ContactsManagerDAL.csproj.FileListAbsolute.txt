@@ -1,0 +1,6 @@
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\bin\Debug\ContactsManagerDAL.dll
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\bin\Debug\ContactsManagerDAL.pdb
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\obj\Debug\ContactsManagerDAL.csproj.AssemblyReference.cache
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\obj\Debug\ContactsManagerDAL.csproj.CoreCompileInputs.cache
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\obj\Debug\ContactsManagerDAL.dll
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerDAL\obj\Debug\ContactsManagerDAL.pdb

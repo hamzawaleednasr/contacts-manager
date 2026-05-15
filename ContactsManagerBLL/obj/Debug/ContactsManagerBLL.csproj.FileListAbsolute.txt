@@ -1,0 +1,9 @@
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\bin\Debug\ContactsManagerBLL.dll
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\bin\Debug\ContactsManagerBLL.pdb
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\bin\Debug\ContactsManagerDAL.dll
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\bin\Debug\ContactsManagerDAL.pdb
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\obj\Debug\ContactsManagerBLL.csproj.AssemblyReference.cache
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\obj\Debug\ContactsManagerBLL.csproj.CoreCompileInputs.cache
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\obj\Debug\Contacts.053BAD7E.Up2Date
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\obj\Debug\ContactsManagerBLL.dll
+D:\Hamza\Programming\.NET stack\back-end\ADO.NET\Projects\ContactsManager-Project\ContactsManagerBLL\obj\Debug\ContactsManagerBLL.pdb
