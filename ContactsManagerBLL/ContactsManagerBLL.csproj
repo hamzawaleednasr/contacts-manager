@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="ContactService.cs" />
     <Compile Include="ContactViewModel.cs" />
+    <Compile Include="CountryService.cs" />
+    <Compile Include="CountryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
