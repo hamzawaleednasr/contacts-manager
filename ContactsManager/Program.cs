@@ -1,6 +1,5 @@
 ﻿using ContactsManagerBLL;
 using System;
-using System.Collections.Concurrent;
 using System.Configuration;
 using System.Data;
 

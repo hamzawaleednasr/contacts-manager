@@ -1,13 +1,13 @@
-﻿namespace ContactsManagerDAL
+﻿namespace ContactsManagerBLL
 {
-    public class Country
+    public class CountryViewModel
     {
         public int Id { get; set; }
         public string CountryName { get; set; }
 
-        public Country() { }
+        public CountryViewModel() { }
 
-        public Country(int Id, string CountryName)
+        public CountryViewModel(int Id, string CountryName)
         {
             this.Id = Id;
             this.CountryName = CountryName;
