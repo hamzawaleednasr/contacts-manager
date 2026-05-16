@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using ContactsManagerDAL;
+﻿using ContactsManagerDAL;
+using System.Data;
 
 namespace ContactsManagerBLL
 {
@@ -35,15 +35,11 @@ namespace ContactsManagerBLL
             return MapToViewModel(contact);
         }
 
-        public List<ContactViewModel> GetAll()
+        public DataTable GetAll()
         {
-            List<Contact> contacts = _repository.GetAll();
-            List<ContactViewModel> result = new List<ContactViewModel>();
+            DataTable contacts = _repository.GetAll();
 
-            foreach (Contact c in contacts)
-                result.Add(MapToViewModel(c));
-
-            return result;
+            return contacts;
         }
 
         public int Add(ContactViewModel vm)

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ContactsManagerDAL
 {
@@ -59,7 +59,7 @@ namespace ContactsManagerDAL
             }
         }
 
-        public List<Contact> GetAll()
+        public DataTable GetAll()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -73,33 +73,23 @@ namespace ContactsManagerDAL
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            List<Contact> contacts = new List<Contact>();
+                            DataTable contacts = new DataTable();
 
-                            while (reader.Read())
+                            if (reader.HasRows)
                             {
-                                Contact contact = new Contact
-                                {
-                                    Id = (int)reader["ContactID"],
-                                    CountryID = (int)reader["CountryID"],
-                                    FirstName = (string)reader["FirstName"],
-                                    LastName = (string)reader["LastName"],
-                                    Email = (string)reader["Email"],
-                                    Phone = (string)reader["Phone"],
-                                    Address = (string)reader["Address"],
-                                    BirthDate = (DateTime)reader["DateOfBirth"],
-                                    ImagePath = reader["ImagePath"] == DBNull.Value ? string.Empty : (string)reader["ImagePath"]
-                                };
-
-                                contacts.Add(contact);
+                                contacts.Load(reader);
+                            }
+                            else
+                            {
+                                return null;
                             }
 
                             return contacts;
                         }
                     }
-                    catch (Exception ex)
+                    catch
                     {
-                        Console.WriteLine(ex.Message);
-                        return new List<Contact>();
+                        return null;
                     }
                 }
             }

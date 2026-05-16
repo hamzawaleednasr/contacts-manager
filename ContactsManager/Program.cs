@@ -1,7 +1,7 @@
 ﻿using ContactsManagerBLL;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 
 namespace ContactsConsoleUI
 {
@@ -94,19 +94,20 @@ namespace ContactsConsoleUI
                 {
                     Console.Clear();
 
-                    List<ContactViewModel> contacts = cs.GetAll();
+                    DataTable contacts = cs.GetAll();
 
-                    if (contacts.Count == 0)
+                    if (contacts == null || contacts.Rows.Count == 0)
                     {
                         Console.WriteLine("No contacts found.");
-                        continue;
                     }
+                    else
+                    {
+                        Console.WriteLine($"\n{"ID",-5} {"First Name",-15} {"Last Name",-15} {"Phone",-15} {"Email",-25}");
+                        Console.WriteLine(new string('-', 75));
 
-                    Console.WriteLine($"\n{"ID",-5} {"First Name",-15} {"Last Name",-15} {"Phone",-15} {"Email",-25}");
-                    Console.WriteLine(new string('-', 75));
-
-                    foreach (ContactViewModel c in contacts)
-                        Console.WriteLine($"{c.Id,-5} {c.FirstName,-15} {c.LastName,-15} {c.Phone,-15} {c.Email,-25}");
+                        foreach (DataRow c in contacts.Rows)
+                            Console.WriteLine($"{c["ContactID"],-5} {c["FirstName"],-15} {c["LastName"],-15} {c["Phone"],-15} {c["Email"],-25}");
+                    }
 
                     Console.Write("\nPress any key to return menu . . .");
                     Console.ReadKey(true);
