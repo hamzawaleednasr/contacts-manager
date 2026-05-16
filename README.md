@@ -77,12 +77,3 @@ Contributions are welcome. Please follow these steps:
 3. Commit your changes with clear messages.
 4. Open a pull request describing the change.
 
-Ensure you do not commit secrets or machine-specific files. The repository includes a .gitignore tuned for Visual Studio / .NET Framework projects.
-
-## License
-
-This project does not include a license file by default. Add a LICENSE (for example MIT) if you intend to make the repository public.
-
----
-
-If you want a tailored README with badges, example screenshots, or API documentation, I can generate that next.
