@@ -80,7 +80,8 @@ namespace ContactsConsoleUI
         static void Main(string[] args)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            ContactService cs = new ContactService(connectionString);
+            ContactService contactService = new ContactService(connectionString);
+            CountryService countryService = new CountryService(connectionString);
 
             while (true)
             {
@@ -95,7 +96,7 @@ namespace ContactsConsoleUI
                 {
                     Console.Clear();
 
-                    DataTable contacts = cs.GetAll();
+                    DataTable contacts = contactService.GetAll();
 
                     if (contacts == null || contacts.Rows.Count == 0)
                     {
@@ -122,7 +123,7 @@ namespace ContactsConsoleUI
                     Console.Write("Enter the contact id: ");
                     ContactID = Convert.ToInt32(Console.ReadLine());
 
-                    ContactViewModel contact = cs.GetByID(ContactID);
+                    ContactViewModel contact = contactService.GetByID(ContactID);
 
                     if (contact == null)
                     {
@@ -141,7 +142,7 @@ namespace ContactsConsoleUI
                     Console.Clear();
 
                     ContactViewModel vm = _ReadContact();
-                    int newId = cs.Add(vm);
+                    int newId = contactService.Add(vm);
 
                     if (newId == -1)
                     {
@@ -164,7 +165,7 @@ namespace ContactsConsoleUI
                     Console.Write("Enter contact id to update: ");
                     ContactID = Convert.ToInt32(Console.ReadLine());
 
-                    ContactViewModel contact = cs.GetByID(ContactID);
+                    ContactViewModel contact = contactService.GetByID(ContactID);
 
                     if (contact == null)
                     {
@@ -185,7 +186,7 @@ namespace ContactsConsoleUI
                             contact = _ReadContact();
                             contact.Id = tempID;
 
-                            bool isUpdated = cs.Update(contact);
+                            bool isUpdated = contactService.Update(contact);
 
                             if (isUpdated)
                                 Console.WriteLine("\nContact Updated Successfully!");
@@ -210,7 +211,7 @@ namespace ContactsConsoleUI
                     Console.Write("Enter contact id to delete: ");
                     ContactID = Convert.ToInt32(Console.ReadLine());
 
-                    ContactViewModel contact = cs.GetByID(ContactID);
+                    ContactViewModel contact = contactService.GetByID(ContactID);
 
                     if (contact == null)
                     {
@@ -227,7 +228,7 @@ namespace ContactsConsoleUI
 
                         if (delete == 1)
                         {
-                            bool isDeleted = cs.Delete(contact.Id);
+                            bool isDeleted = contactService.Delete(contact.Id);
 
                             if (isDeleted)
                                 Console.WriteLine("\nContact Deleted Successfully!");
@@ -250,7 +251,7 @@ namespace ContactsConsoleUI
                     Console.Write("Enter the contact id: ");
                     int id = Convert.ToInt32(Console.ReadLine());
 
-                    bool IsFound = cs.IsThere(id);
+                    bool IsFound = contactService.IsThere(id);
 
                     if (IsFound)
                     {
@@ -264,6 +265,8 @@ namespace ContactsConsoleUI
                     Console.Write("\nPress any key to return menu . . .");
                     Console.ReadKey(true);
                 }
+
+                // Here, we must add countries options, but i do not have time to waste it here . . .
             }
         }
     }
