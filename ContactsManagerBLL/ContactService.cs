@@ -79,5 +79,10 @@ namespace ContactsManagerBLL
         {
             return _repository.Delete(id);
         }
+
+        public bool IsThere(int id)
+        {
+            return _repository.IsThere(id);
+        }
     }
 }

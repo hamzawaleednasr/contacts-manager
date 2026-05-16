@@ -1,5 +1,6 @@
 ﻿using ContactsManagerBLL;
 using System;
+using System.Collections.Concurrent;
 using System.Configuration;
 using System.Data;
 
@@ -18,6 +19,7 @@ namespace ContactsConsoleUI
             Console.WriteLine("\t[3] Add contact.");
             Console.WriteLine("\t[4] Update contact.");
             Console.WriteLine("\t[5] Delete contact.");
+            Console.WriteLine("\t[6] Is contact there.");
             Console.WriteLine("\t[0] Exit.");
             Console.WriteLine("════════════════════════════════════");
         }
@@ -32,10 +34,10 @@ namespace ContactsConsoleUI
                 Console.Write("Choose a number: ");
                 choice = Console.ReadLine();
 
-                if (int.TryParse(choice, out input) && input >= 0 && input <= 5)
+                if (int.TryParse(choice, out input) && input >= 0 && input <= 6)
                     break;
 
-                Console.WriteLine("Invalid input, enter a valid number between 0 and 5");
+                Console.WriteLine("Invalid input, enter a valid number between 0 and 6");
             }
 
             return input;
@@ -240,6 +242,27 @@ namespace ContactsConsoleUI
                     }
 
                     Console.WriteLine("\nPress any key to return menu . . .");
+                    Console.ReadKey(true);
+                }
+                else if (input == 6)
+                {
+                    Console.Clear();
+
+                    Console.Write("Enter the contact id: ");
+                    int id = Convert.ToInt32(Console.ReadLine());
+
+                    bool IsFound = cs.IsThere(id);
+
+                    if (IsFound)
+                    {
+                        Console.WriteLine("\nYes, The contact is there :-)");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nNo, The contact is not there :-(");
+                    }
+
+                    Console.Write("\nPress any key to return menu . . .");
                     Console.ReadKey(true);
                 }
             }

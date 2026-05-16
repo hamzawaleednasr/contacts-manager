@@ -9,5 +9,6 @@ namespace ContactsManagerDAL
         int Add(Contact contact);
         bool Update(Contact contact);
         bool Delete(int id);
+        bool IsThere(int id);
     }
 }

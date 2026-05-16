@@ -224,5 +224,32 @@ namespace ContactsManagerDAL
                 }
             }
         }
+
+        public bool IsThere(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = @"SELECT Found=1 FROM Contacts WHERE ContactID = @ContactID;
+                ";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ContactID", id);
+
+                    try
+                    {
+                        connection.Open();
+
+                        var found = command.ExecuteScalar();
+
+                        return Convert.ToInt16(found) == 1;
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
     }
 }
