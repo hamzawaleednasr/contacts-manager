@@ -47,7 +47,7 @@ Example (app.config or user-provided configuration):
 
 ```
 <connectionStrings>
-  <add name="ContactsDb" connectionString="Server=.;Database=Contacts;Integrated Security=True;" />
+  <add name="ContactsDb" connectionString="Server=.;Database=YOUR-DATABASE-NAME;User Id=YOUR-USERid-ON-SSMS;Password=YOUR-CONN-PASS" />
 </connectionStrings>
 ```
 
